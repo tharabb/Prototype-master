@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="URL" value="https://stage2.numi.com/login"/>
+  <listeners>
+    <listener class-name="customListener.Listeners"/>
+    <listener class-name="com.numi.extentReportListener.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Test-Onboarding(failed)">
+    <classes>
+      <class name="test_onboarding.Onb_basicDiab_backdated">
+        <methods>
+          <include name="lessThanHundredWtLoss_DBplan_backdated"/>
+          <include name="tearDown"/>
+          <include name="onboardingUpto_setUpacctPg"/>
+        </methods>
+      </class> <!-- test_onboarding.Onb_basicDiab_backdated -->
+    </classes>
+  </test> <!-- Test-Onboarding(failed) -->
+</suite> <!-- Failed suite [Suite] -->
